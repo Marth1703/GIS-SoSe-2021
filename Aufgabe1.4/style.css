@@ -1,0 +1,250 @@
+body{
+    margin: 0;
+    padding: 0;
+  background-image: url("/Bilder/bg.png");  
+}
+ul {
+    list-style-type: none;
+    position: sticky;
+    background:rgb(134, 42, 26);
+    padding: 0px;
+    width: 800px;
+    height: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    top: 0px;
+    text-align: right;   
+    z-index: 20;
+}
+#Start1, #Start2, #Start3{
+   color: white;
+   background: rgb(235, 161, 22);
+   width: 800px;
+   padding: 0px;
+   font-family: sans-serif;
+   font-size: 2em;
+   font-weight: bolder;
+   letter-spacing: 1px;
+   margin-top: 50px;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   border-style:solid;
+   border-color: rgb(89, 95, 95);
+}
+
+li { 
+  float: right;
+  border-left: 2px solid rgb(165, 165, 165);
+}
+li:last-child{
+  border-left: none;
+}
+a {
+    color:white;
+    font-family: sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    padding: 1px 10px;
+    letter-spacing: 2px;
+}
+
+a:hover{
+    color: rgb(197, 197, 197);
+}
+
+.active{
+    background-color: rgb(77, 22, 16);
+}
+
+#Marvin, #Marvin2{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+}
+p{
+  color: rgb(134, 42, 26);
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding: 0px;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+h2{
+  color: rgb(134, 42, 26);
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: left;
+  padding: 0px;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 2px 2px 2px #000000;
+  
+}
+table{
+  padding: 0px;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
+}
+.audio{
+  width: 264px;
+}
+#gis-tabelle{
+  font-family: sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  text-align: justify;
+  padding: 0px;
+  width: 400px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  border: 2px solid rgb(134, 42, 26);
+}
+#gis-tabelle-head{
+  color: white;
+  background: rgb(134, 42, 26);;
+}
+#gis-tabelle-body{
+  color: black;
+  background: white;
+  font-size: 20px;
+}
+#clockaudio{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1{
+  color: rgb(134, 42, 26);;;
+  font-family: sans-serif;
+  font-size: 1em;
+  text-align: left;
+  padding: 0px;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.impressum{
+  color: rgb(134, 42, 26);
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: left;
+  padding-top: 5px;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#mail{
+  padding-top: 50px;
+}
+#nachfolgend{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.icons{
+  color: rgb(104, 104, 104);
+}
+.tablefont{
+  font-family: sans-serif;
+  font-size: 1em;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+.textspace{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+div{
+  
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+}
+input[type=text]{
+  width: 400px;
+  padding: 12px 20px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  background:rgb(184, 184, 184);
+  border: none;
+}
+input[type=submit]{
+  color: aliceblue;
+  width: 300px;
+  padding: 12px 20px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  background:rgb(184, 184, 184);
+  border: none;
+  cursor: pointer;
+}
+input[type=submit]:hover{
+  background:rgb(109, 109, 109);
+}
+textarea{
+  width: 500px;
+  background:rgb(184, 184, 184);
+  border: none;
+}
+@media screen and (max-width: 1024px) {
+  img, video{
+    
+    margin-left: 0;
+    margin-right: 0;
+    width: 400px;
+    height: 300px;
+  }
+  #Start1, #Start2, #Start3{
+    color: white;
+    background: rgb(235, 161, 22);
+    width: 800px;
+    padding: 0px;
+    font-family: sans-serif;
+    font-size: 2em;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-style:solid;
+    border-color: rgb(89, 95, 95);
+ }
+}
+
+@media screen and (max-width: 500px) {
+  img, video{
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 300px;
+  }
+  #Start1, #Start2, #Start3{
+    width: 350px;
+ }
+  audio{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+ }
+ ul {
+  width: 350px;
+  height: 2em;
+  margin-left: 0;
+  margin-right: 0;
+ 
+}
+}
