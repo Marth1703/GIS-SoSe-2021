@@ -275,10 +275,10 @@ li:first-child{
 
 @media screen and (max-width: 500px) {
   img, video{
-    margin-left: 0;
-    margin-right: 0;
-    width: 500px;
-    height: 350px;
+    display: block;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
   }
   #Start1, #Start2, #Start3{
     display: block;
@@ -304,10 +304,18 @@ li:first-child{
   padding-right: 20px;
 }
  p{
-  text-align: center;
-  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
   padding-left: 30px;
   padding-right: 30px;
+ }
+ #disclaim{
+   width: 350px;
+   padding-left: 30px;
+   padding-right: 0px;
+   margin-left: auto;
+   margin-right: auto;
  }
  a{
   font-size: 25px;
