@@ -227,17 +227,19 @@ mark{
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   img, video{
     display: block;
-    width: 500px;
-    height: 350px;
-    margin-left: auto;
-    margin-right: auto;
- 
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    left: 0;
+    float: left;
   }
   #Start1, #Start2, #Start3{
-    width: 500px;
+    width: 80%;
+    font-size: 2.5em;
  }
   audio{
     display: flex;
@@ -245,9 +247,10 @@ mark{
     margin-top: 10px;
  }
  ul {
-  width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 1.5em;
  }
 li{
   float: right;
@@ -257,16 +260,71 @@ li:first-child{
 }
  p{
   text-align: center;
-  width: 400px;
+  width: 80%;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 1.5em;
+ }
+ h1{
+   font-size: 1.5em;
+ }
+ .impressum{
+   font-size: 1.5em;
+ }
+ a{
+  font-size: 40px;
+ }
+ #Marvin, #Marvin2{
+  display: block;
+  width: 60%;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+}
+}
+@media screen and (max-width: 800px) {
+  img, video{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+ 
+  }
+  #Start1, #Start2, #Start3{
+    width: 80%;
+ }
+  audio{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+ }
+ ul {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  
+ }
+li{
+  float: right;
+}
+li:first-child{
+  padding-right: 200px;
+}
+ p{
+  text-align: center;
+  width: 80%;
   padding-left: 30px;
   padding-right: 30px;
  }
  a{
-  font-size: 25px;
+  font-size: 1.5em;
  }
  #Marvin, #Marvin2{
   display: block;
-  width: 300px;
+  width: 60%;
+  float: none;
   margin-left: auto;
   margin-right: auto;
   padding-top: 50px;
@@ -276,15 +334,16 @@ li:first-child{
 @media screen and (max-width: 500px) {
   img, video{
     display: block;
-    height: 250px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #Start1, #Start2, #Start3{
-    display: block;
+    width: 100%;
+    height: auto;
     margin-left: 0;
     margin-right: 0;
-    width: 500px;
+    left: 0;
+    float: left;
+  }
+  #Start1, #Start2, #Start3{
+    width: 80%;
+    font-size: 2.5em;
  }
   audio{
     display: flex;
@@ -329,19 +388,47 @@ li:first-child{
 }
 }
 @media screen and (max-width: 400px) {
-  body *{
+  img, video{
     display: block;
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    left: 0;
+    float: left;
   }
-}
-  @media screen and (max-width: 300px) {
-    body *{
-      display: block;
-      width: 300px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
+  #Start1, #Start2, #Start3{
+    width: 80%;
+    font-size: 2.5em;
+ }
+  audio{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+ }
 
+ p{
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  padding-left: 30px;
+  padding-right: 30px;
+ }
+ #disclaim{
+   width: 340px;
+   padding-left: 30px;
+   padding-right: 0px;
+   margin-left: auto;
+   margin-right: auto;
+ }
+ a{
+  font-size: 20px;
+ }
+ #Marvin, #Marvin2{
+  display: block;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+}
+}
