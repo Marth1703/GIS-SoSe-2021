@@ -230,15 +230,15 @@ mark{
 @media screen and (max-width: 1025px) {
   img, video{
     display: block;
-    width: 100%;
-    height: auto;
+    width: 1000px;
+    height: 650px;
     margin-left: 0;
     margin-right: 0;
     left: 0;
     float: left;
   }
   #Start1, #Start2, #Start3{
-    width: 80%;
+    width: 800px;
     font-size: 2.5em;
  }
   audio{
@@ -247,7 +247,7 @@ mark{
     margin-top: 10px;
  }
  ul {
-  width: 100%;
+  width: 1000px;
   margin-left: 0;
   margin-right: 0;
   font-size: 1.5em;
@@ -260,7 +260,7 @@ li:first-child{
 }
  p{
   text-align: center;
-  width: 80%;
+  width: 800px;
   padding-left: 30px;
   padding-right: 30px;
   font-size: 1.5em;
@@ -276,7 +276,7 @@ li:first-child{
  }
  #Marvin, #Marvin2{
   display: block;
-  width: 60%;
+  width: 600px;
   float: none;
   margin-left: auto;
   margin-right: auto;
@@ -286,14 +286,14 @@ li:first-child{
 @media screen and (max-width: 800px) {
   img, video{
     display: block;
-    width: 100%;
-    height: auto;
+    width: 750px;
+    height: 500px;
     margin-left: auto;
     margin-right: auto;
  
   }
   #Start1, #Start2, #Start3{
-    width: 80%;
+    width: 600px;
  }
   audio{
     display: flex;
@@ -301,7 +301,7 @@ li:first-child{
     margin-top: 10px;
  }
  ul {
-  width: 100%;
+  width: 800px;
   margin-left: 0;
   margin-right: 0;
   
@@ -314,16 +314,16 @@ li:first-child{
 }
  p{
   text-align: center;
-  width: 80%;
+  width: 600px;
   padding-left: 30px;
   padding-right: 30px;
  }
  a{
-  font-size: 1.5em;
+  font-size: 2em;
  }
  #Marvin, #Marvin2{
   display: block;
-  width: 60%;
+  width: 600px;
   float: none;
   margin-left: auto;
   margin-right: auto;
@@ -333,17 +333,16 @@ li:first-child{
 
 @media screen and (max-width: 500px) {
   img, video{
-    display: block;
-    width: 100%;
-    height: auto;
     margin-left: 0;
     margin-right: 0;
-    left: 0;
-    float: left;
+    width: 480px;
+    height: 300px;
   }
   #Start1, #Start2, #Start3{
-    width: 80%;
-    font-size: 2.5em;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    width: 400px;
  }
   audio{
     display: flex;
@@ -351,30 +350,42 @@ li:first-child{
     margin-top: 10px;
  }
  ul {
-  width: 500px;
-  margin-left: 0;
-  margin-right: 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
 }
 li{
-  padding-right: 20px;
+  padding-right: 0px;
   float: right;
 }
 li:first-child{
-  padding-right: 20px;
+  padding-right: 0px;
 }
  p{
   margin-left: auto;
   margin-right: auto;
-  width: 300px;
+  width: 400px;
   padding-left: 30px;
   padding-right: 30px;
- }
+  font-size: 1em;
+}
+h1{
+  font-size: 1em;
+}
+.impressum{
+  font-size: 1em;
+}
+a{
+ font-size: 40px;
+}
  #disclaim{
-   width: 350px;
-   padding-left: 30px;
-   padding-right: 0px;
-   margin-left: auto;
-   margin-right: auto;
+  width: 80%;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1em;
  }
  a{
   font-size: 25px;
@@ -389,44 +400,69 @@ li:first-child{
 }
 @media screen and (max-width: 400px) {
   img, video{
-    display: block;
-    width: 100%;
-    height: auto;
+   display: block;
     margin-left: 0;
     margin-right: 0;
-    left: 0;
+    width: 401px;
+    height: 250px;
     float: left;
+    left: 0;
   }
   #Start1, #Start2, #Start3{
-    width: 80%;
-    font-size: 2.5em;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    width: 400px;
  }
   audio{
     display: flex;
     flex-direction: column;
     margin-top: 10px;
  }
-
+ ul {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+li{
+  padding-right: 0px;
+  float: right;
+}
+li:first-child{
+  padding-right: 0px;
+}
  p{
   margin-left: auto;
   margin-right: auto;
   width: 300px;
   padding-left: 30px;
   padding-right: 30px;
- }
+  font-size: 1em;
+}
+h1{
+  font-size: 1em;
+}
+.impressum{
+  font-size: 1em;
+}
+a{
+ font-size: 40px;
+}
  #disclaim{
-   width: 340px;
-   padding-left: 30px;
+   width: 80%;
+   padding-left: 0px;
    padding-right: 0px;
    margin-left: auto;
    margin-right: auto;
+   font-size: 1em;
  }
  a{
   font-size: 20px;
  }
  #Marvin, #Marvin2{
   display: block;
-  width: 300px;
+  width: 250px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 50px;
