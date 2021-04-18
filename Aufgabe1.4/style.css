@@ -88,7 +88,9 @@ h2{
   margin-left: auto;
   margin-right: auto;
   text-shadow: 2px 2px 2px #000000;
-  
+}
+h1 + h1{
+   font-weight: lighter;
 }
 table{
   padding: 0px;
@@ -97,8 +99,14 @@ table{
   margin-right: auto;
   z-index: 0;
 }
+tr td{
+  font-weight: bold;
+}
 .audio{
   width: 264px;
+}
+audio ~ audio{
+  padding-left: 1px;
 }
 #gis-tabelle{
   font-family: sans-serif;
@@ -147,6 +155,9 @@ h1{
   margin-left: auto;
   margin-right: auto;
 }
+p>mark{
+  letter-spacing: 1px;
+}
 #mail{
   padding-top: 50px;
 }
@@ -168,7 +179,6 @@ h1{
   padding-bottom: 15px;
 }
 div{
-  
   margin-left: auto;
   margin-right: auto;
   width: 800px;
@@ -199,40 +209,35 @@ textarea{
   background:rgb(184, 184, 184);
   border: none;
 }
+@keyframes flashy{
+  0%   {background-color:red; padding-bottom: 0px;}
+  10%  {background-color:orange; padding-bottom: 5px;}
+  20%  {background-color:yellow; padding-bottom: 10px;}
+  30%  {background-color:green; padding-bottom: 15px;}
+  40% {background-color:blue; padding-bottom: 10px;}
+  50%   {background-color:lightblue; padding-bottom: 5px;}
+  60%  {background-color:green; padding-top: 0px;}
+  70%  {background-color:yellow; padding-top: 5px;}
+  80%  {background-color:orange; padding-top: 10px;}
+  90% {background-color:red; padding-top: 5px;}
+  100% {background-color:darkred; padding-top: 0px;}
+}
+mark{
+  animation-name: flashy;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
 @media screen and (max-width: 1024px) {
   img, video{
-    
-    margin-left: 0;
-    margin-right: 0;
-    width: 400px;
-    height: 300px;
-  }
-  #Start1, #Start2, #Start3{
     display: block;
-    margin-right: 0;
-    margin-left: 0;
-    width: 370px;
-   
- } 
- ul {
-  width: 350px;
-  height: 2em;
-  margin-left: 0;
-  margin-right: 0;
+    width: 500px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
  
-} 
-}
-
-@media screen and (max-width: 500px) {
-  img, video{
-    display: block;
-    margin-left: 0;
-    margin-right: 0;
-    width: 400px;
-    height: 250px;
   }
   #Start1, #Start2, #Start3{
-    width: 350px;
+    width: 500px;
  }
   audio{
     display: flex;
@@ -240,10 +245,78 @@ textarea{
     margin-top: 10px;
  }
  ul {
-  width: 350px;
-  height: 2em;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+ }
+li{
+  float: right;
+}
+li:first-child{
+  padding-right: 200px;
+}
+ p{
+  text-align: center;
+  width: 400px;
+  padding-left: 30px;
+  padding-right: 30px;
+ }
+ a{
+  font-size: 25px;
+ }
+ #Marvin, #Marvin2{
+  display: block;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+}
+}
+
+@media screen and (max-width: 500px) {
+  img, video{
+    margin-left: 0;
+    margin-right: 0;
+    width: 500px;
+    height: 350px;
+  }
+  #Start1, #Start2, #Start3{
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    width: 500px;
+ }
+  audio{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+ }
+ ul {
+  width: 500px;
   margin-left: 0;
   margin-right: 0;
- 
+}
+li{
+  padding-right: 20px;
+  float: right;
+}
+li:first-child{
+  padding-right: 20px;
+}
+ p{
+  text-align: center;
+  width: 400px;
+  padding-left: 30px;
+  padding-right: 30px;
+ }
+ a{
+  font-size: 25px;
+ }
+ #Marvin, #Marvin2{
+  display: block;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
 }
 }
