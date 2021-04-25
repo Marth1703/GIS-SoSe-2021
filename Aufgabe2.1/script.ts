@@ -106,3 +106,80 @@ function factorial(n: number): number {
 }
 
 console.log(factorial(6)); 
+
+function leapyears(): void {
+
+    for (let i: number = 1900; i < 2022; i++) {
+        if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0) {
+             console.log(i);
+        }
+    }
+}
+leapyears();
+
+let hash: string = "";
+for (let o: number = 0; o < 7; o++) {
+hash += "#";
+console.log(hash);
+}
+
+function hundred(): void {
+    for (let i: number = 1; i < 100; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            console.log("FizzBuzz");
+            i++;
+        } 
+        else if (i % 3 == 0) {
+            console.log("Fizz");
+            i++;
+        }
+        else if (i % 5 == 0) {
+            console.log("Buzz");
+            i++;
+        }
+        console.log(i);
+    }
+}
+hundred();
+//Was ist die clevere Lösung?
+
+function chessboard(): void {
+    let board: string = "";
+    let zaehler: number = 0;
+    for (let i: number = 0; i < 8; i++) {
+        zaehler = i;
+        for (let z: number = 0; z < 8; z++) {
+            if (zaehler % 2 == 0) {
+                board += " ";
+            }
+            if (zaehler % 2 != 0) {
+                board += "#";  
+            }
+            zaehler ++;
+        }
+        board += "\n";
+    }
+    console.log(board);
+}
+chessboard();
+
+function chessboard2(hoehe: number, breite: number): void {
+    let board: string = "";
+    let zaehler: number = 0;
+    for (let i: number = 0; i < hoehe; i++) {
+        zaehler = i;
+        for (let z: number = 0; z < breite; z++) {
+            if (zaehler % 2 == 0) {
+                board += " ";
+            }
+            if (zaehler % 2 != 0) {
+                board += "#";  
+            }
+            zaehler ++;
+        }
+        board += "\n";
+    }
+    console.log(board);
+}
+
+chessboard2 (6, 14);

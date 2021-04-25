@@ -92,4 +92,74 @@ function factorial(n) {
     }
 }
 console.log(factorial(6));
+function leapyears() {
+    for (let i = 1900; i < 2022; i++) {
+        if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0) {
+            console.log(i);
+        }
+    }
+}
+leapyears();
+let hash = "";
+for (let o = 0; o < 7; o++) {
+    hash += "#";
+    console.log(hash);
+}
+function hundred() {
+    for (let i = 1; i < 100; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            console.log("FizzBuzz");
+            i++;
+        }
+        else if (i % 3 == 0) {
+            console.log("Fizz");
+            i++;
+        }
+        else if (i % 5 == 0) {
+            console.log("Buzz");
+            i++;
+        }
+        console.log(i);
+    }
+}
+hundred();
+//Was ist die clevere Lösung?
+function chessboard() {
+    let board = "";
+    let zaehler = 0;
+    for (let i = 0; i < 8; i++) {
+        zaehler = i;
+        for (let z = 0; z < 8; z++) {
+            if (zaehler % 2 == 0) {
+                board += " ";
+            }
+            if (zaehler % 2 != 0) {
+                board += "#";
+            }
+            zaehler++;
+        }
+        board += "\n";
+    }
+    console.log(board);
+}
+chessboard();
+function chessboard2(hoehe, breite) {
+    let board = "";
+    let zaehler = 0;
+    for (let i = 0; i < hoehe; i++) {
+        zaehler = i;
+        for (let z = 0; z < breite; z++) {
+            if (zaehler % 2 == 0) {
+                board += " ";
+            }
+            if (zaehler % 2 != 0) {
+                board += "#";
+            }
+            zaehler++;
+        }
+        board += "\n";
+    }
+    console.log(board);
+}
+chessboard2(6, 14);
 //# sourceMappingURL=script.js.map
