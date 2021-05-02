@@ -1,3 +1,4 @@
+namespace Aufgabe2_1 {
 function a1(): void {
     let x: string = "Alles";
     console.log(x);
@@ -183,3 +184,4 @@ function chessboard2(hoehe: number, breite: number): void {
 }
 
 chessboard2 (6, 14);
+}
