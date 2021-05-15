@@ -40,13 +40,12 @@ namespace Aufgabe2_4 {
                 localStorage.setItem("dach", auswahl1.src);
             }
             else if (document.querySelector("body").getAttribute("id") == "mauerseite") {
-                auswahl1.setAttribute("src", localStorage.getItem("dach")); 
+                
                 auswahl2.setAttribute("src", localStorage.getItem("item")); 
                 localStorage.setItem("mauer", auswahl2.src);
             }
             else if (document.querySelector("body").getAttribute("id") == "gartenseite") {
-                auswahl1.setAttribute("src", localStorage.getItem("dach")); 
-                auswahl2.setAttribute("src", localStorage.getItem("mauer")); 
+
                 auswahl3.setAttribute("src", localStorage.getItem("item")); 
                 localStorage.setItem("garten", auswahl3.src);
             }
@@ -69,9 +68,12 @@ namespace Aufgabe2_4 {
     }
     else if (document.querySelector("body").getAttribute("id") == "mauerseite") {
         seiteErstellen(jsonRead().mauer);
+        auswahl1.setAttribute("src", localStorage.getItem("dach")); 
     }
     else if (document.querySelector("body").getAttribute("id") == "gartenseite") {
         seiteErstellen(jsonRead().garten);
+        auswahl1.setAttribute("src", localStorage.getItem("dach")); 
+        auswahl2.setAttribute("src", localStorage.getItem("mauer")); 
     }
 
 
