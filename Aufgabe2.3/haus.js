@@ -1,18 +1,6 @@
 "use strict";
 var Aufgabe2_3;
 (function (Aufgabe2_3) {
-    class Dach {
-    }
-    Aufgabe2_3.Dach = Dach;
-    class Mauer {
-    }
-    Aufgabe2_3.Mauer = Mauer;
-    class Fassade {
-    }
-    Aufgabe2_3.Fassade = Fassade;
-    class Haus {
-    }
-    Aufgabe2_3.Haus = Haus;
     let canvas = document.getElementById("dach1");
     let contextdach1 = canvas.getContext("2d");
     let canvas2 = document.getElementById("dach2");
@@ -47,21 +35,13 @@ var Aufgabe2_3;
     contextdach3.closePath();
     contextdach3.stroke();
     contextdach3.fill();
-    function chooseRoof1() {
-        console.log(Aufgabe2_3.auswahlDach[0].art);
-        console.log(Aufgabe2_3.auswahlDach[0].farbe);
+    function choose() {
+        console.log();
+        console.log();
     }
-    function chooseRoof2() {
-        console.log(Aufgabe2_3.auswahlDach[1].art);
-        console.log(Aufgabe2_3.auswahlDach[1].farbe);
-    }
-    function chooseRoof3() {
-        console.log(Aufgabe2_3.auswahlDach[2].art);
-        console.log(Aufgabe2_3.auswahlDach[2].farbe);
-    }
-    document.querySelector("#firstdach").addEventListener("click", chooseRoof1);
-    document.querySelector("#seconddach").addEventListener("click", chooseRoof2);
-    document.querySelector("#thirddach").addEventListener("click", chooseRoof3);
+    document.querySelector("#firstdach").addEventListener("click", choose);
+    document.querySelector("#seconddach").addEventListener("click", choose);
+    document.querySelector("#thirddach").addEventListener("click", choose);
     /*
         let hauptdiv1: HTMLElement = document.createElement("button");
         let div1: HTMLElement = document.createElement("button");
