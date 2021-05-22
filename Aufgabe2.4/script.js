@@ -1,11 +1,15 @@
 "use strict";
 var Aufgabe2_4;
 (function (Aufgabe2_4) {
-    function jsonRead() {
-        let teilsHaus = JSON.parse(Aufgabe2_4.hausJSON);
+    /* export let auswahlHaus: Haus = {
+        dach: [{ art: "Flachdach", bild: "./Bilder/dach1.png" }, { art: "Satteldach", bild: "./Bilder/dach2.png" }, { art: "Zeltdach", bild: "./Bilder/dach3.png" }],
+        mauer: [{ art: "Betonmauer", bild: "./Bilder/mauer1.png" }, { art: "Steinmauer", bild: "./Bilder/mauer2.png" }, { art: "Holzmauer", bild: "./Bilder/mauer3.png" }],
+        garten: [{ art: "Keinen", bild: "./Bilder/garten1.png" }, { art: "Schrebergarten", bild: "./Bilder/garten2.png" }, { art: "Wiese", bild: "./Bilder/garten3.png" }]
+     }; */
+    /* export async function jsonRead(_url: RequestInfo): Promise<void> {
+        let response: Response = await fetch(_url);
         return teilsHaus;
-    }
-    Aufgabe2_4.jsonRead = jsonRead;
+    } */
     let ausgewaehlt = document.createElement("div");
     ausgewaehlt.classList.add("showcase");
     let auswahl1 = document.createElement("img");
@@ -53,7 +57,7 @@ var Aufgabe2_4;
             moeglichkeiten.appendChild(teildiv);
         }
     }
-    if (document.querySelector("body").getAttribute("id") == "dachseite") {
+    /* if (document.querySelector("body").getAttribute("id") == "dachseite") {
         seiteErstellen(jsonRead().dach);
     }
     else if (document.querySelector("body").getAttribute("id") == "mauerseite") {
@@ -64,6 +68,6 @@ var Aufgabe2_4;
         seiteErstellen(jsonRead().garten);
         auswahl1.setAttribute("src", localStorage.getItem("dach"));
         auswahl2.setAttribute("src", localStorage.getItem("mauer"));
-    }
+    } */
 })(Aufgabe2_4 || (Aufgabe2_4 = {}));
 //# sourceMappingURL=script.js.map

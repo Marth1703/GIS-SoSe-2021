@@ -1,9 +1,28 @@
 namespace Aufgabe2_4 {
 
-    export function jsonRead(): Haus {
-        let teilsHaus: Haus = JSON.parse(hausJSON);
-        return teilsHaus;
+
+    /* export let auswahlHaus: Haus = {
+        dach: [{ art: "Flachdach", bild: "./Bilder/dach1.png" }, { art: "Satteldach", bild: "./Bilder/dach2.png" }, { art: "Zeltdach", bild: "./Bilder/dach3.png" }],
+        mauer: [{ art: "Betonmauer", bild: "./Bilder/mauer1.png" }, { art: "Steinmauer", bild: "./Bilder/mauer2.png" }, { art: "Holzmauer", bild: "./Bilder/mauer3.png" }],
+        garten: [{ art: "Keinen", bild: "./Bilder/garten1.png" }, { art: "Schrebergarten", bild: "./Bilder/garten2.png" }, { art: "Wiese", bild: "./Bilder/garten3.png" }]
+     }; */
+
+    export interface Hausteil {
+        art: string;
+        bild: string;
     }
+
+    export interface Haus {
+        dach: Hausteil[];
+        mauer: Hausteil[];
+        garten: Hausteil[];
+
+    }
+
+    /* export async function jsonRead(_url: RequestInfo): Promise<void> {
+        let response: Response = await fetch(_url);
+        return teilsHaus;
+    } */
 
     let ausgewaehlt: HTMLDivElement = <HTMLDivElement>document.createElement("div");
     ausgewaehlt.classList.add("showcase");
@@ -36,17 +55,17 @@ namespace Aufgabe2_4 {
             localStorage.setItem("item", teil.bild);
 
             if (document.querySelector("body").getAttribute("id") == "dachseite") {
-                auswahl1.setAttribute("src", localStorage.getItem("item")); 
+                auswahl1.setAttribute("src", localStorage.getItem("item"));
                 localStorage.setItem("dach", auswahl1.src);
             }
             else if (document.querySelector("body").getAttribute("id") == "mauerseite") {
-                
-                auswahl2.setAttribute("src", localStorage.getItem("item")); 
+
+                auswahl2.setAttribute("src", localStorage.getItem("item"));
                 localStorage.setItem("mauer", auswahl2.src);
             }
             else if (document.querySelector("body").getAttribute("id") == "gartenseite") {
 
-                auswahl3.setAttribute("src", localStorage.getItem("item")); 
+                auswahl3.setAttribute("src", localStorage.getItem("item"));
                 localStorage.setItem("garten", auswahl3.src);
             }
 
@@ -63,18 +82,18 @@ namespace Aufgabe2_4 {
         }
     }
 
-    if (document.querySelector("body").getAttribute("id") == "dachseite") {
+    /* if (document.querySelector("body").getAttribute("id") == "dachseite") {
         seiteErstellen(jsonRead().dach);
     }
     else if (document.querySelector("body").getAttribute("id") == "mauerseite") {
         seiteErstellen(jsonRead().mauer);
-        auswahl1.setAttribute("src", localStorage.getItem("dach")); 
+        auswahl1.setAttribute("src", localStorage.getItem("dach"));
     }
     else if (document.querySelector("body").getAttribute("id") == "gartenseite") {
         seiteErstellen(jsonRead().garten);
-        auswahl1.setAttribute("src", localStorage.getItem("dach")); 
-        auswahl2.setAttribute("src", localStorage.getItem("mauer")); 
-    }
+        auswahl1.setAttribute("src", localStorage.getItem("dach"));
+        auswahl2.setAttribute("src", localStorage.getItem("mauer"));
+    } */
 
 
 
