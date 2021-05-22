@@ -19,10 +19,6 @@ namespace Aufgabe2_4 {
 
     }
 
-    /* export async function jsonRead(_url: RequestInfo): Promise<void> {
-        let response: Response = await fetch(_url);
-        return teilsHaus;
-    } */
 
     let ausgewaehlt: HTMLDivElement = <HTMLDivElement>document.createElement("div");
     ausgewaehlt.classList.add("showcase");
@@ -33,6 +29,23 @@ namespace Aufgabe2_4 {
     ausgewaehlt.appendChild(auswahl1);
     ausgewaehlt.appendChild(auswahl2);
     ausgewaehlt.appendChild(auswahl3);
+
+    export async function jsonRead(_url: RequestInfo): Promise<void> {
+        let response: Response = await fetch(_url);
+        let antwort: Haus = await response.json();
+        if (document.querySelector("body").getAttribute("id") == "dachseite") {
+            seiteErstellen(antwort.dach);
+        }
+        else if (document.querySelector("body").getAttribute("id") == "mauerseite") {
+            seiteErstellen(antwort.mauer);
+            auswahl1.setAttribute("src", localStorage.getItem("dach"));
+        }
+        else if (document.querySelector("body").getAttribute("id") == "gartenseite") {
+            seiteErstellen(antwort.garten);
+            auswahl1.setAttribute("src", localStorage.getItem("dach"));
+            auswahl2.setAttribute("src", localStorage.getItem("mauer"));
+        }
+    }
 
     export function hausDiv(teil: Hausteil, _zahl: number): HTMLDivElement {
 
@@ -82,21 +95,6 @@ namespace Aufgabe2_4 {
         }
     }
 
-    /* if (document.querySelector("body").getAttribute("id") == "dachseite") {
-        seiteErstellen(jsonRead().dach);
-    }
-    else if (document.querySelector("body").getAttribute("id") == "mauerseite") {
-        seiteErstellen(jsonRead().mauer);
-        auswahl1.setAttribute("src", localStorage.getItem("dach"));
-    }
-    else if (document.querySelector("body").getAttribute("id") == "gartenseite") {
-        seiteErstellen(jsonRead().garten);
-        auswahl1.setAttribute("src", localStorage.getItem("dach"));
-        auswahl2.setAttribute("src", localStorage.getItem("mauer"));
-    } */
-
-
-
-
+    jsonRead("https://marth1703.github.io/GIS-SoSe-2021/Aufgabe2.4/data.json");
 
 }

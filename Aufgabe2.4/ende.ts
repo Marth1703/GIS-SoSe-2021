@@ -7,6 +7,24 @@ document.body.appendChild(ausgewaehlt);
 ausgewaehlt.appendChild(auswahl1);
 ausgewaehlt.appendChild(auswahl2);
 ausgewaehlt.appendChild(auswahl3);
-auswahl1.setAttribute("src", localStorage.getItem("dach")); 
-auswahl2.setAttribute("src", localStorage.getItem("mauer")); 
-auswahl3.setAttribute("src", localStorage.getItem("garten")); 
+auswahl1.setAttribute("src", localStorage.getItem("dach"));
+auswahl2.setAttribute("src", localStorage.getItem("mauer"));
+auswahl3.setAttribute("src", localStorage.getItem("garten"));
+
+async function serverExchange(url: RequestInfo): Promise<void> {
+    let query: URLSearchParams = new URLSearchParams(localStorage);
+    url = url + "?" + query.toString();
+    let response: Response = await fetch(url);
+    let antwort: string = await response.text();
+    let anzeige: HTMLDivElement = <HTMLDivElement> document.getElementById("servernachricht");
+    let nachricht: HTMLSpanElement = <HTMLSpanElement> document.getElementById("nachricht");
+    nachricht.innerText = antwort;
+    anzeige.appendChild(nachricht);
+    document.body.appendChild(anzeige);
+
+    if (response.error) {
+
+    }
+
+
+}

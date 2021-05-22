@@ -6,10 +6,6 @@ var Aufgabe2_4;
         mauer: [{ art: "Betonmauer", bild: "./Bilder/mauer1.png" }, { art: "Steinmauer", bild: "./Bilder/mauer2.png" }, { art: "Holzmauer", bild: "./Bilder/mauer3.png" }],
         garten: [{ art: "Keinen", bild: "./Bilder/garten1.png" }, { art: "Schrebergarten", bild: "./Bilder/garten2.png" }, { art: "Wiese", bild: "./Bilder/garten3.png" }]
      }; */
-    /* export async function jsonRead(_url: RequestInfo): Promise<void> {
-        let response: Response = await fetch(_url);
-        return teilsHaus;
-    } */
     let ausgewaehlt = document.createElement("div");
     ausgewaehlt.classList.add("showcase");
     let auswahl1 = document.createElement("img");
@@ -19,6 +15,23 @@ var Aufgabe2_4;
     ausgewaehlt.appendChild(auswahl1);
     ausgewaehlt.appendChild(auswahl2);
     ausgewaehlt.appendChild(auswahl3);
+    async function jsonRead(_url) {
+        let response = await fetch(_url);
+        let antwort = await response.json();
+        if (document.querySelector("body").getAttribute("id") == "dachseite") {
+            seiteErstellen(antwort.dach);
+        }
+        else if (document.querySelector("body").getAttribute("id") == "mauerseite") {
+            seiteErstellen(antwort.mauer);
+            auswahl1.setAttribute("src", localStorage.getItem("dach"));
+        }
+        else if (document.querySelector("body").getAttribute("id") == "gartenseite") {
+            seiteErstellen(antwort.garten);
+            auswahl1.setAttribute("src", localStorage.getItem("dach"));
+            auswahl2.setAttribute("src", localStorage.getItem("mauer"));
+        }
+    }
+    Aufgabe2_4.jsonRead = jsonRead;
     function hausDiv(teil, _zahl) {
         let div = document.createElement("div");
         let bild = document.createElement("img");
@@ -57,17 +70,6 @@ var Aufgabe2_4;
             moeglichkeiten.appendChild(teildiv);
         }
     }
-    /* if (document.querySelector("body").getAttribute("id") == "dachseite") {
-        seiteErstellen(jsonRead().dach);
-    }
-    else if (document.querySelector("body").getAttribute("id") == "mauerseite") {
-        seiteErstellen(jsonRead().mauer);
-        auswahl1.setAttribute("src", localStorage.getItem("dach"));
-    }
-    else if (document.querySelector("body").getAttribute("id") == "gartenseite") {
-        seiteErstellen(jsonRead().garten);
-        auswahl1.setAttribute("src", localStorage.getItem("dach"));
-        auswahl2.setAttribute("src", localStorage.getItem("mauer"));
-    } */
+    jsonRead("https://marth1703.github.io/GIS-SoSe-2021/Aufgabe2.4/data.json");
 })(Aufgabe2_4 || (Aufgabe2_4 = {}));
 //# sourceMappingURL=script.js.map

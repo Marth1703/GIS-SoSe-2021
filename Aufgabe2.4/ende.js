@@ -11,4 +11,17 @@ ausgewaehlt.appendChild(auswahl3);
 auswahl1.setAttribute("src", localStorage.getItem("dach"));
 auswahl2.setAttribute("src", localStorage.getItem("mauer"));
 auswahl3.setAttribute("src", localStorage.getItem("garten"));
+async function serverExchange(url) {
+    let query = new URLSearchParams(localStorage);
+    url = url + "?" + query.toString();
+    let response = await fetch(url);
+    let antwort = await response.text();
+    let anzeige = document.getElementById("servernachricht");
+    let nachricht = document.getElementById("nachricht");
+    nachricht.innerText = antwort;
+    anzeige.appendChild(nachricht);
+    document.body.appendChild(anzeige);
+    if (response.error) {
+    }
+}
 //# sourceMappingURL=ende.js.map
