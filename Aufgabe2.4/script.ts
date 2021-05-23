@@ -7,6 +7,7 @@ namespace Aufgabe2_4 {
         garten: [{ art: "Keinen", bild: "./Bilder/garten1.png" }, { art: "Schrebergarten", bild: "./Bilder/garten2.png" }, { art: "Wiese", bild: "./Bilder/garten3.png" }]
      }; */
 
+
     export interface Hausteil {
         art: string;
         bild: string;
