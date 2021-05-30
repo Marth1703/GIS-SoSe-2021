@@ -1,0 +1,27 @@
+{
+  "name": "gis-sose-2021",
+  "version": "1.0.0",
+  "description": "package file",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "node Aufgabe3.1/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marth1703/GIS-SoSe-2021.git"
+  },
+  "keywords": [
+    "package"
+  ],
+  "author": "Marvin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marth1703/GIS-SoSe-2021/issues"
+  },
+  "homepage": "https://github.com/Marth1703/GIS-SoSe-2021#readme"
+}
