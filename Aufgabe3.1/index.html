@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="server.js" defer></script>
+</head>
+
+<body>
+    <h1>Formular</h1>
+    <form action="https://gis-example.herokuapp.com" method="GET">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <p>Studiengang:</p>
+        <input type="checkbox" id="gang1" name="gang1" value="MIB">
+        <label for="vehicle1"> Medieninformatik</label>
+        <input type="checkbox" id="gang2" name="gang2" value="MKB">
+        <label for="vehicle2"> Medienkonzeption</label>
+        <input type="checkbox" id="gang3" name="gang3" value="OMB">
+        <label for="vehicle3"> Onlinemedien</label>
+        <p>Matrikelnummer:</p>
+        <input type="text" id="number" name="number">
+        <p></p>
+        <input type="submit" value="Anmelden">
+
+    </form>
+</body>
+
+</html>
