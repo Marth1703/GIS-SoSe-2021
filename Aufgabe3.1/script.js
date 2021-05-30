@@ -13,7 +13,13 @@ var Aufgabe3_1;
         communicate("https://marthgissose2021.herokuapp.com/");
         console.log("test123");
     }
-    let button = document.getElementById("button");
+    let div = document.createElement("div");
+    let button = document.createElement("button");
+    let p = document.createElement("p");
+    p.innerText = "Wahl";
     button.addEventListener("click", buttonclick);
+    button.appendChild(p);
+    div.appendChild(button);
+    document.body.appendChild(div);
 })(Aufgabe3_1 || (Aufgabe3_1 = {}));
 //# sourceMappingURL=script.js.map

@@ -14,6 +14,12 @@ namespace Aufgabe3_1 {
         console.log("test123");
     }
 
-    let button: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button");
+    let div: HTMLDivElement = <HTMLDivElement>document.createElement("div");
+    let button: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
+    let p: HTMLParagraphElement = <HTMLParagraphElement>document.createElement("p");
+    p.innerText = "Wahl";
     button.addEventListener("click", buttonclick);
+    button.appendChild(p);
+    div.appendChild(button);
+    document.body.appendChild(div);
 }

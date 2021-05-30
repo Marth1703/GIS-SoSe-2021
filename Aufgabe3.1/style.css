@@ -8,6 +8,11 @@ p {
     letter-spacing: 1px;
 }
 
+div {
+    max-width: 20px;
+    max-height: 5px;
+}
+
 h1 {
     font-weight: bolder;
     font-family: sans-serif;
