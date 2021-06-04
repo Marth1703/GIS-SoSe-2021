@@ -1,5 +1,4 @@
 import * as Http from "http";
-import * as Url from "url";
 
 export namespace P_3_1Server {
 

@@ -11,6 +11,8 @@ p {
 div {
     max-width: 20px;
     max-height: 5px;
+    font-weight: bolder;
+    font-family: sans-serif;
 }
 
 h1 {
