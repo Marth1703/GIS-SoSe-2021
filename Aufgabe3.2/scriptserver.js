@@ -3,39 +3,36 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Aufgabe3_2 = void 0;
 var Aufgabe3_2;
 (function (Aufgabe3_2) {
-    let htmlButton = document.getElementById("html");
-    let jsonButton = document.getElementById("json");
-    htmlButton.addEventListener("click", handleHTML);
-    jsonButton.addEventListener("click", handleJSON);
+    document.getElementById("html").addEventListener("click", test);
+    document.getElementById("html").addEventListener("click", clickHtml);
+    document.getElementById("json").addEventListener("click", clickJson);
+    //htmlButton.addEventListener("click", handleHTML);
+    //jsonButton.addEventListener("click", handleJSON);
+    let url = "https://marthgissose2021.herokuapp.com/";
     let div = document.createElement("div");
     document.body.appendChild(div);
-    async function clickHtml(_url) {
+    async function clickHtml() {
         let formData = new FormData(document.forms[0]);
         let query = new URLSearchParams(formData);
-        _url = _url + "/html?" + query.toString();
-        let response = await fetch(_url);
+        url = url + "/html?" + query.toString();
+        let response = await fetch(url);
         let serverAntwort = await response.text();
         console.log(serverAntwort);
         console.log("antwort erhalten");
         div.innerHTML = serverAntwort;
     }
-    async function clickJson(_url) {
+    async function clickJson() {
         let formData = new FormData(document.forms[0]);
         let query = new URLSearchParams(formData);
-        _url = _url + "/json?" + query.toString();
-        let response = await fetch(_url);
-        let serverAntwort = JSON.parse(await response.json());
+        url = url + "/json?" + query.toString();
+        let response = await fetch(url);
+        let serverAntwort = await response.text();
         console.log(serverAntwort);
         console.log("antwort erhalten");
         div.innerHTML = serverAntwort;
     }
-    function handleHTML() {
-        clickHtml("https://marthgissose2021.herokuapp.com/");
-        console.log("anfrage gestartet");
-    }
-    function handleJSON() {
-        clickJson("https://marthgissose2021.herokuapp.com/");
-        console.log("anfrage gestartet");
+    function test() {
+        console.log("hallo");
     }
 })(Aufgabe3_2 = exports.Aufgabe3_2 || (exports.Aufgabe3_2 = {}));
 //# sourceMappingURL=scriptserver.js.map

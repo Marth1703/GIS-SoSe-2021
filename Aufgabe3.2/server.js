@@ -18,20 +18,21 @@ var Aufgabe3_2;
     }
     function handleRequest(_request, _response) {
         console.log("I hear voices!");
+        _response.setHeader("content-type", "text/html; charset=utf-8");
+        _response.setHeader("Access-Control-Allow-Origin", "*");
         if (_request.url) {
             let url = Url.parse(_request.url, true);
-            let json = JSON.stringify(url.query);
             if (url.pathname == "/html") {
                 for (let key in url.query) {
-                    _response.write(key + ":" + url.query[key] + "<br/>");
+                    console.log(key + ": " + url.query[key] + " ");
+                    _response.write(key + ": " + url.query[key] + "<br/>");
                 }
             }
             if (url.pathname == "/json") {
+                let json = JSON.stringify(url.query);
                 _response.write(json);
             }
         }
-        _response.setHeader("content-type", "text/html; charset=utf-8");
-        _response.setHeader("Access-Control-Allow-Origin", "*");
         console.log(_request.url);
         _response.end();
     }
