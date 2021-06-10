@@ -26,7 +26,6 @@ export namespace Aufgabe3_2 {
 
             if (url.pathname == "/html") {
                 for (let key in url.query) {
-                    console.log(key + ": " + url.query[key] + " ");
                     _response.write("<p>" + key + ": " + url.query[key] + "</p>");
                 }
             }

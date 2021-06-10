@@ -24,7 +24,6 @@ var Aufgabe3_2;
             let url = Url.parse(_request.url, true);
             if (url.pathname == "/html") {
                 for (let key in url.query) {
-                    console.log(key + ": " + url.query[key] + " ");
                     _response.write("<p>" + key + ": " + url.query[key] + "</p>");
                 }
             }
