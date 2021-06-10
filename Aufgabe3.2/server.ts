@@ -31,6 +31,7 @@ export namespace Aufgabe3_2 {
                 }
             }
             if (url.pathname == "/json") {
+                _response.setHeader("content-type", "application/json");
                 let json: string = JSON.stringify(url.query);
                 _response.write(json);
             }
