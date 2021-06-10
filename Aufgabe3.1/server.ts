@@ -1,4 +1,4 @@
-import * as Http from "http";
+/* import * as Http from "http";
 
 export namespace P_3_1Server {
 
@@ -36,4 +36,4 @@ export namespace P_3_1Server {
         console.log(_request.url);
         _response.end();
     }
-}
+} */

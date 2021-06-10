@@ -10,7 +10,6 @@ namespace Aufgabe3_2 {
 
     async function clickHtml(): Promise<void> {
         url = "https://marthgissose2021.herokuapp.com/";
-        
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url = url + "/html" + "?" + query.toString();
         let response: Response = await fetch(url);
@@ -22,7 +21,6 @@ namespace Aufgabe3_2 {
 
     async function clickJson(): Promise<void> {
         url = "https://marthgissose2021.herokuapp.com/";
-        
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url = url + "/json" + "?" + query.toString();
         let response: Response = await fetch(url);
