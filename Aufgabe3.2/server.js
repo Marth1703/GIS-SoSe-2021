@@ -18,14 +18,14 @@ var Aufgabe3_2;
     }
     function handleRequest(_request, _response) {
         console.log("I hear voices!");
-        _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
+        _response.setHeader("content-type", "text/html; charset=utf-8");
         if (_request.url) {
             let url = Url.parse(_request.url, true);
             if (url.pathname == "/html") {
                 for (let key in url.query) {
                     console.log(key + ": " + url.query[key] + " ");
-                    _response.write(key + ": " + url.query[key] + "<br/>");
+                    _response.write("<p>" + key + ": " + url.query[key] + "</p>");
                 }
             }
             if (url.pathname == "/json") {
@@ -33,7 +33,6 @@ var Aufgabe3_2;
                 _response.write(json);
             }
         }
-        console.log(_request.url);
         _response.end();
     }
 })(Aufgabe3_2 = exports.Aufgabe3_2 || (exports.Aufgabe3_2 = {}));
