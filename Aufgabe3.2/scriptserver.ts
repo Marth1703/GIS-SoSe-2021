@@ -9,8 +9,9 @@ namespace Aufgabe3_2 {
     interface Antwort {
         name: string;
         studiengang: string;
-        matrikel: number;
+        matrikel: string;
     }
+
     async function clickHtml(): Promise<void> {
         url = "https://marthgissose2021.herokuapp.com";
         let formData: FormData = new FormData(document.forms[0]);
