@@ -1,6 +1,5 @@
 namespace Endabgabe {
 
-    loadCards();
     interface Card {
         url: string;
         number: string;
@@ -10,7 +9,7 @@ namespace Endabgabe {
     let addButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("add");
     addButton.addEventListener("click", addCard);
 
-    let url: string;
+    let url: string = "https://marthgissose2021.herokuapp.com";
     async function loadCards(): Promise<void> {
         url = "https://marthgissose2021.herokuapp.com";
         url = url + "/loadcards";
@@ -35,5 +34,5 @@ namespace Endabgabe {
         console.log(addAnswer);
         console.log("success");
     }
-
+    loadCards();
 }

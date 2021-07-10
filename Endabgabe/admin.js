@@ -1,11 +1,10 @@
 "use strict";
 var Endabgabe;
 (function (Endabgabe) {
-    loadCards();
     let listDiv = document.getElementById("adminlist");
     let addButton = document.getElementById("add");
     addButton.addEventListener("click", addCard);
-    let url;
+    let url = "https://marthgissose2021.herokuapp.com";
     async function loadCards() {
         url = "https://marthgissose2021.herokuapp.com";
         url = url + "/loadcards";
@@ -28,5 +27,6 @@ var Endabgabe;
         console.log(addAnswer);
         console.log("success");
     }
+    loadCards();
 })(Endabgabe || (Endabgabe = {}));
 //# sourceMappingURL=admin.js.map
