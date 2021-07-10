@@ -1,0 +1,60 @@
+body{
+  background-image: url("images/background.png");  
+}
+p{
+  color: rgb(202, 139, 188);
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 1px 1px rgb(255, 255, 255);
+}
+li a{
+  font-family: sans-serif;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid white;
+}
+li a:hover {
+color: rgb(241, 133, 218);
+}
+.active {
+  border-color: rgb(241, 133, 218);
+}
+#frontimage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+}
+#divsource {
+  text-align: center;
+}
+#imagesource {
+  font-family: sans-serif;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+  font-size: 0.5em;
+  text-decoration: none;
+}
+#imagesource:hover {
+  color: rgb(241, 133, 218);
+}
