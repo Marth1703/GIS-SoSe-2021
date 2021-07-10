@@ -5,10 +5,6 @@ namespace Endabgabe {
         number: string;
     }
 
-    let listDiv: HTMLDivElement = <HTMLDivElement>document.getElementById("adminlist");
-    let addButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("add");
-    addButton.addEventListener("click", addCard);
-
     let url: string = "https://marthgissose2021.herokuapp.com";
     async function loadCards(): Promise<void> {
         url = "https://marthgissose2021.herokuapp.com";
@@ -34,5 +30,8 @@ namespace Endabgabe {
         console.log(addAnswer);
         console.log("success");
     }
+    let listDiv: HTMLDivElement = <HTMLDivElement>document.getElementById("adminlist");
+    let addButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("add");
+    addButton.addEventListener("click", addCard);
     loadCards();
 }
