@@ -1,12 +1,12 @@
 import * as Mongo from "mongodb";
 import * as Http from "http";
 import * as Url from "url";
+import { type } from "os";
 
 export namespace Endabgabe {
 
     interface Card {
-        url: string;
-        id: number;
+        [type: string]: string | string[];
     }
 
     interface Score {
@@ -66,7 +66,7 @@ export namespace Endabgabe {
                 }
 
                 if (url.pathname == "/addcard") {
-                    let addition: string = JSON.stringify(url.query);
+                    let addition: Card = url.query;
                     await storeCard(addition);
                     _response.write(addition);
                 }
@@ -86,7 +86,7 @@ export namespace Endabgabe {
             return result;
         }
 
-        async function storeCard(_addition: string): Promise<void> {
+        async function storeCard(_addition: Card): Promise<void> {
             connectToImages(url);
             cards.insertOne(_addition);
         }

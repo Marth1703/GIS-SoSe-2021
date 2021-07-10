@@ -50,7 +50,7 @@ var Endabgabe;
                     _response.write(JSON.stringify(show));
                 }
                 if (url.pathname == "/addcard") {
-                    let addition = JSON.stringify(url.query);
+                    let addition = url.query;
                     await storeCard(addition);
                     _response.write(addition);
                 }
