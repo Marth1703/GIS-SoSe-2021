@@ -1,6 +1,7 @@
 "use strict";
 var Endabgabe;
 (function (Endabgabe) {
+    let listDiv = document.getElementById("adminlist");
     let url = "https://marthgissose2021.herokuapp.com";
     async function loadCards() {
         url = "https://marthgissose2021.herokuapp.com";
@@ -24,7 +25,6 @@ var Endabgabe;
         console.log(addAnswer);
         console.log("success");
     }
-    let listDiv = document.getElementById("adminlist");
     let addButton = document.getElementById("add");
     addButton.addEventListener("click", addCard);
     loadCards();

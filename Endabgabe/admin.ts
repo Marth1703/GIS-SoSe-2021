@@ -4,7 +4,7 @@ namespace Endabgabe {
         url: string;
         number: string;
     }
-
+    let listDiv: HTMLDivElement = <HTMLDivElement>document.getElementById("adminlist");
     let url: string = "https://marthgissose2021.herokuapp.com";
     async function loadCards(): Promise<void> {
         url = "https://marthgissose2021.herokuapp.com";
@@ -30,8 +30,8 @@ namespace Endabgabe {
         console.log(addAnswer);
         console.log("success");
     }
-    let listDiv: HTMLDivElement = <HTMLDivElement>document.getElementById("adminlist");
-    let addButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("add");
+
+    let addButton: HTMLElement = document.getElementById("add");
     addButton.addEventListener("click", addCard);
     loadCards();
 }
