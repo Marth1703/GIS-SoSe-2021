@@ -10,7 +10,6 @@ namespace Endabgabe {
     let mins: string = "";
     let win: number = 0;
     let currentTime: string = "";
-    //let stack: Card[];
     let card1: string = "";
     let card2: string = "";
 
@@ -19,6 +18,7 @@ namespace Endabgabe {
     let shuffledstack: string[] = shuffleArray(s);
     starter.addEventListener("click", function (): void { createField(shuffledstack); });
 
+    //Funktion zum Vermischen eines Arrays. Quelle= "https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array"
     function shuffleArray(str: string[]): string[] {
         let x: string = "";
         let lang: number = str.length - 1;

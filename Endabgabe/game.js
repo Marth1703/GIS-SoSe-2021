@@ -10,13 +10,13 @@ var Endabgabe;
     let mins = "";
     let win = 0;
     let currentTime = "";
-    //let stack: Card[];
     let card1 = "";
     let card2 = "";
     Endabgabe.s = ["images/Ike.png", "images/Falco.png", "images/Ice_Climbers.png", "images/Bowser.png", "images/Captain_Falcon.png", "images/Ness.png", "images/Donkey_Kong.png", "images/Meta_Knight.png",
         "images/Ike.png", "images/Falco.png", "images/Ice_Climbers.png", "images/Bowser.png", "images/Captain_Falcon.png", "images/Ness.png", "images/Donkey_Kong.png", "images/Meta_Knight.png"];
     let shuffledstack = shuffleArray(Endabgabe.s);
     starter.addEventListener("click", function () { createField(shuffledstack); });
+    //Funktion zum Vermischen eines Arrays. Quelle= "https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array"
     function shuffleArray(str) {
         let x = "";
         let lang = str.length - 1;
