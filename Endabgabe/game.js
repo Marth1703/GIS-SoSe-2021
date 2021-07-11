@@ -13,39 +13,10 @@ var Endabgabe;
     //let stack: Card[];
     let card1 = "";
     let card2 = "";
-    let s = ["images/Ike.png", "images/Falco.png", "images/Ice_Climbers.png", "images/Bowser.png", "images/Captain_Falcon.png", "images/Ness.png", "images/Donkey_Kong.png", "images/Meta_Knight.png",
+    Endabgabe.s = ["images/Ike.png", "images/Falco.png", "images/Ice_Climbers.png", "images/Bowser.png", "images/Captain_Falcon.png", "images/Ness.png", "images/Donkey_Kong.png", "images/Meta_Knight.png",
         "images/Ike.png", "images/Falco.png", "images/Ice_Climbers.png", "images/Bowser.png", "images/Captain_Falcon.png", "images/Ness.png", "images/Donkey_Kong.png", "images/Meta_Knight.png"];
-    let shuffledstack = shuffleArray(s);
+    let shuffledstack = shuffleArray(Endabgabe.s);
     starter.addEventListener("click", function () { createField(shuffledstack); });
-    /* function setCards(): string[] {
-     for (let i1: number = 0; i1 < 1; i1++) {
-        _s[i1] = "https://static.wikia.nocookie.net/mario/images/7/71/SSB4_Artwork_Ike.png/revision/latest/scale-to-width-down/1000?cb=20190607174619&path-prefix=de";
-    }
-    for (let i2: number = 2; i2 < 3; i2++) {
-        _s[i2] = "https://static.wikia.nocookie.net/mario/images/9/98/SSBU_Artwork_Ice_Climbers.png/revision/latest/scale-to-width-down/350?cb=20180903164338&path-prefix=de";
-    }
-    for (let i3: number = 4; i3 < 5; i3++) {
-        _s[i3] = "https://static.wikia.nocookie.net/mario/images/5/5c/SSB4_Artwork_Falco.png/revision/latest/scale-to-width-down/120?cb=20140928173233&path-prefix=de";
-    }
-    for (let i4: number = 6; i4 < 7; i4++) {
-        _s[i4] = "https://static.wikia.nocookie.net/mario/images/6/64/KSA_Meta-Knight.png/revision/latest/scale-to-width-down/350?cb=20190618200846&path-prefix=de";
-    }
-    for (let i5: number = 8; i5 < 9; i5++) {
-        _s[i5] = "https://static.wikia.nocookie.net/mario/images/8/88/SSBU_Artwork_Captain_Falcon.png/revision/latest/scale-to-width-down/350?cb=20190713214405&path-prefix=de";
-    }
-    for (let i6: number = 10; i6 < 11; i6++) {
-        _s[i6] = "https://static.wikia.nocookie.net/mario/images/2/26/SMP_Artwork_Donkey_Kong.png/revision/latest/scale-to-width-down/350?cb=20190607152749&path-prefix=de";
-    }
-    for (let i7: number = 12; i7 < 13; i7++) {
-        _s[i7] = "https://static.wikia.nocookie.net/mario/images/6/68/NSMBUD_Artwork_Bowser.png/revision/latest/scale-to-width-down/350?cb=20190618203244&path-prefix=de";
-   }
-    for (let i8: number = 14; i8 < 15; i8++) {
-        _s[i8] = "https://static.wikia.nocookie.net/mario/images/8/8f/SSBU_Artwork_Ness.png/revision/latest/scale-to-width-down/350?cb=20190627175941&path-prefix=de";
-    }
-
-    return _s;
-
-} */
     function shuffleArray(str) {
         let x = "";
         let lang = str.length - 1;

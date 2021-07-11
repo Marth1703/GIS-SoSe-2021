@@ -1,6 +1,8 @@
 namespace Endabgabe {
 
     let timeList: HTMLElement = <HTMLElement>document.getElementById("times");
+    let loadButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("recieve");
+    loadButton.addEventListener("click", revieceScores);
 
     interface Score {
         name: string;

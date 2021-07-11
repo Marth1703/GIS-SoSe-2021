@@ -2,6 +2,8 @@
 var Endabgabe;
 (function (Endabgabe) {
     let timeList = document.getElementById("times");
+    let loadButton = document.getElementById("recieve");
+    loadButton.addEventListener("click", revieceScores);
     let url = "";
     async function revieceScores() {
         url = "https://marthgissose2021.herokuapp.com";

@@ -10,6 +10,18 @@ h1, h2 {
   text-align: center;
   text-shadow: 1px 1px rgb(255, 255, 255);
 }
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(202, 139, 188);
+  border: solid;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
 li a{
   font-family: sans-serif;
   font-weight: bolder;
@@ -160,4 +172,39 @@ form {
 }
 #times {
   color: white;
+}
+#recieve {
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(202, 139, 188);
+  border: solid;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+#recieve:hover {
+  background-color: rgb(75, 33, 66);
+}
+#adminAdd {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#add {
+  margin-top: 10px;
+}
+#add:hover {
+  background-color: rgb(75, 33, 66);
+}
+#adminlist {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
 }
