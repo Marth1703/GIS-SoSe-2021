@@ -1,7 +1,7 @@
 body{
   background-image: url("images/background.png");  
 }
-p{
+h1, h2 {
   color: rgb(202, 139, 188);
   font-family: sans-serif;
   font-weight: bold;
@@ -57,4 +57,104 @@ color: rgb(241, 133, 218);
 }
 #imagesource:hover {
   color: rgb(241, 133, 218);
+}
+.rows {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+}
+#stopwatch {
+  color: rgb(202, 139, 188);
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#startgame {
+  display: block;
+  background-color: rgb(202, 139, 188);
+  border: solid;
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#startgame:hover {
+  background-color: rgb(75, 33, 66);
+}
+#gamecontrol {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#gamecontrol a {
+  font-family: sans-serif;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+  font-size: 1em;
+  text-decoration: none;
+}
+#gamecontrol a:hover {
+  color:rgb(202, 139, 188);
+}
+#submission {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+  font-size: 1em;
+  text-decoration: none;
+}
+#timedisplay {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  font-size: 1.5em;
+  text-shadow: 1px 1px rgb(202, 139, 188);
+  color: rgb(255, 255, 255);
+}
+#submitDIV {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+form {
+  color: white;
+  font-family: sans-serif;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  font-size: 1.5em;
+}
+#submit {
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(202, 139, 188);
+  border: solid;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+#submit:hover {
+  background-color: rgb(75, 33, 66);
 }

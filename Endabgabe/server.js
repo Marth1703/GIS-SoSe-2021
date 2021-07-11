@@ -41,16 +41,17 @@ var Endabgabe;
             if (_request.url) {
                 let url = Url.parse(_request.url, true);
                 if (url.pathname == "/scoretodb") {
+                    _response.setHeader("content-type", "application/json");
                     let submission = JSON.stringify(url.query);
-                    await storeScore(submission);
                     _response.write(submission);
+                    await storeScore(submission);
                 }
                 if (url.pathname == "/loadcards") {
                     let show = await adminload();
                     _response.write(JSON.stringify(show));
                 }
                 if (url.pathname == "/addcard") {
-                    let addition = url.query;
+                    let addition = JSON.stringify(url.query);
                     await storeCard(addition);
                     _response.write(addition);
                 }

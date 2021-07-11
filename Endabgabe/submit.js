@@ -5,7 +5,7 @@ var Endabgabe;
     let submitButton = document.getElementById("submit");
     submitButton.addEventListener("click", sendScore);
     let url;
-    let pb = sessionStorage.getItem("duration");
+    let pb = sessionStorage.getItem("time");
     timeDiv.innerHTML = pb;
     async function sendScore() {
         url = "https://marthgissose2021.herokuapp.com";

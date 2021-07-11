@@ -4,7 +4,7 @@ namespace Endabgabe {
     submitButton.addEventListener("click", sendScore);
     
     let url: string;
-    let pb: string = sessionStorage.getItem("duration");
+    let pb: string = sessionStorage.getItem("time");
     timeDiv.innerHTML = pb;
 
     interface Score {

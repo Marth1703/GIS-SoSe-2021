@@ -1,12 +1,12 @@
 import * as Mongo from "mongodb";
 import * as Http from "http";
 import * as Url from "url";
-import { type } from "os";
 
 export namespace Endabgabe {
 
     interface Card {
-        [type: string]: string | string[];
+        link: string;
+        number: string;
     }
 
     interface Score {
@@ -56,9 +56,10 @@ export namespace Endabgabe {
                 let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
 
                 if (url.pathname == "/scoretodb") {
+                    _response.setHeader("content-type", "application/json");
                     let submission: string = JSON.stringify(url.query);
-                    await storeScore(submission);
                     _response.write(submission);
+                    await storeScore(submission);
                 }
                 if (url.pathname == "/loadcards") {
                     let show: Card[] = await adminload();
@@ -66,7 +67,7 @@ export namespace Endabgabe {
                 }
 
                 if (url.pathname == "/addcard") {
-                    let addition: Card = url.query;
+                    let addition: string = JSON.stringify(url.query);
                     await storeCard(addition);
                     _response.write(addition);
                 }
@@ -86,7 +87,7 @@ export namespace Endabgabe {
             return result;
         }
 
-        async function storeCard(_addition: Card): Promise<void> {
+        async function storeCard(_addition: string): Promise<void> {
             connectToImages(url);
             cards.insertOne(_addition);
         }
