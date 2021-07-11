@@ -3,7 +3,7 @@ namespace Endabgabe {
     let submitButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("submit");
     submitButton.addEventListener("click", sendScore);
     
-    let url: string;
+    let url: string = "";
     let pb: string = sessionStorage.getItem("time");
     timeDiv.innerHTML = pb;
 

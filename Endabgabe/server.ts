@@ -58,14 +58,18 @@ export namespace Endabgabe {
                 if (url.pathname == "/scoretodb") {
                     _response.setHeader("content-type", "application/json");
                     let submission: string = JSON.stringify(url.query);
-                    _response.write(submission);
                     await storeScore(submission);
+                    _response.write(submission);
+                }
+                if (url.pathname == "/loadtimes") {
+                    _response.setHeader("content-type", "application/json");
+                    let list: Score[] = await timeload();
+                    _response.write(JSON.stringify(list));
                 }
                 if (url.pathname == "/loadcards") {
                     let show: Card[] = await adminload();
                     _response.write(JSON.stringify(show));
                 }
-
                 if (url.pathname == "/addcard") {
                     let addition: string = JSON.stringify(url.query);
                     await storeCard(addition);
@@ -78,6 +82,13 @@ export namespace Endabgabe {
         async function storeScore(_submission: string): Promise<void> {
             connectToScores(url);
             scores.insertOne(_submission);
+        }
+
+        async function timeload(): Promise <Score[]> {
+            connectToScores(url);
+            let cursor: Mongo.Cursor = scores.find();
+            let result: Score[] = await cursor.toArray();
+            return result;
         }
 
         async function adminload(): Promise <Card[]> {

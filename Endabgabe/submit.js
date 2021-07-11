@@ -4,7 +4,7 @@ var Endabgabe;
     let timeDiv = document.getElementById("timedisplay");
     let submitButton = document.getElementById("submit");
     submitButton.addEventListener("click", sendScore);
-    let url;
+    let url = "";
     let pb = sessionStorage.getItem("time");
     timeDiv.innerHTML = pb;
     async function sendScore() {

@@ -43,8 +43,13 @@ var Endabgabe;
                 if (url.pathname == "/scoretodb") {
                     _response.setHeader("content-type", "application/json");
                     let submission = JSON.stringify(url.query);
-                    _response.write(submission);
                     await storeScore(submission);
+                    _response.write(submission);
+                }
+                if (url.pathname == "/loadtimes") {
+                    _response.setHeader("content-type", "application/json");
+                    let list = await timeload();
+                    _response.write(JSON.stringify(list));
                 }
                 if (url.pathname == "/loadcards") {
                     let show = await adminload();
@@ -61,6 +66,12 @@ var Endabgabe;
         async function storeScore(_submission) {
             connectToScores(url);
             scores.insertOne(_submission);
+        }
+        async function timeload() {
+            connectToScores(url);
+            let cursor = scores.find();
+            let result = await cursor.toArray();
+            return result;
         }
         async function adminload() {
             connectToImages(url);

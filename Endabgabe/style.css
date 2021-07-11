@@ -158,3 +158,6 @@ form {
 #submit:hover {
   background-color: rgb(75, 33, 66);
 }
+#times {
+  color: white;
+}
