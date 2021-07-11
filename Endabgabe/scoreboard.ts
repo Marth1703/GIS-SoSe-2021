@@ -1,8 +1,10 @@
 namespace Endabgabe {
 
     let timeList: HTMLElement = <HTMLElement>document.getElementById("times");
+    let importantDiv: HTMLDivElement = <HTMLDivElement>document.getElementById("memeDiv");
     let loadButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("recieve");
     loadButton.addEventListener("click", revieceScores);
+    loadButton.addEventListener("click", loadImportancy);
 
     interface Score {
         name: string;
@@ -23,4 +25,10 @@ namespace Endabgabe {
         }
     }
     revieceScores();
+
+    function loadImportancy(): void {
+        let display: HTMLImageElement = <HTMLImageElement>document.createElement("img");
+        display.setAttribute("src", "images/memeXd.png");
+        importantDiv.appendChild(display);
+    }
 }

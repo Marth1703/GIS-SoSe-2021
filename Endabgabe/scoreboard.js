@@ -2,8 +2,10 @@
 var Endabgabe;
 (function (Endabgabe) {
     let timeList = document.getElementById("times");
+    let importantDiv = document.getElementById("memeDiv");
     let loadButton = document.getElementById("recieve");
     loadButton.addEventListener("click", revieceScores);
+    loadButton.addEventListener("click", loadImportancy);
     let url = "";
     async function revieceScores() {
         url = "https://marthgissose2021.herokuapp.com";
@@ -18,5 +20,10 @@ var Endabgabe;
         }
     }
     revieceScores();
+    function loadImportancy() {
+        let display = document.createElement("img");
+        display.setAttribute("src", "images/memeXd.png");
+        importantDiv.appendChild(display);
+    }
 })(Endabgabe || (Endabgabe = {}));
 //# sourceMappingURL=scoreboard.js.map
